@@ -50,13 +50,13 @@ class HealthFactory {
     double h = heights.last.value.toDouble();
 
     const dataType = HealthDataType.BODY_MASS_INDEX;
-    final unit = _dataTypeToUnit[dataType]!;
+    final unit = _dataTypeToUnit[dataType];
 
     final bmiHealthPoints = <HealthDataPoint>[];
     for (var i = 0; i < weights.length; i++) {
       final bmiValue = weights[i].value.toDouble() / (h * h);
       final x = HealthDataPoint(bmiValue, dataType, unit, weights[i].dateFrom,
-          weights[i].dateTo, _platformType, _deviceId!, '', '');
+          weights[i].dateTo, _platformType, _deviceId, '', '');
 
       bmiHealthPoints.add(x);
     }
@@ -107,7 +107,7 @@ class HealthFactory {
       'endDate': endDate.millisecondsSinceEpoch
     };
 
-    final unit = _dataTypeToUnit[dataType]!;
+    final unit = _dataTypeToUnit[dataType];
 
     final fetchedDataPoints = await _channel.invokeMethod('getData', args);
     if (fetchedDataPoints != null) {
@@ -125,7 +125,7 @@ class HealthFactory {
           from,
           to,
           _platformType,
-          _deviceId!,
+          _deviceId,
           sourceId,
           sourceName,
         );

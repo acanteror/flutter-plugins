@@ -148,7 +148,7 @@ const HealthDataTypeJsonValue = {
   HealthDataType.WALKING_HEART_RATE: 'walking_heart_rate',
   HealthDataType.WEIGHT: 'weight',
   HealthDataType.DISTANCE_WALKING_RUNNING: 'distance_walking_running',
-  HealthDataType.DISTANCE_WALKING_RUNNING: 'distance_cycling',
+  HealthDataType.DISTANCE_CYCLING: 'distance_cycling',
   HealthDataType.FLIGHTS_CLIMBED: 'flights_climbed',
   HealthDataType.MOVE_MINUTES: 'move_minutes',
   HealthDataType.DISTANCE_DELTA: 'distance_delta',
