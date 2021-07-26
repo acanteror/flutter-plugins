@@ -3,7 +3,7 @@ part of health;
 /// Main class for the Plugin
 class HealthFactory {
   static const MethodChannel _channel = MethodChannel('flutter_health');
-  String? _deviceId;
+  String _deviceId;
   final _deviceInfo = DeviceInfoPlugin();
 
   static PlatformType _platformType =
