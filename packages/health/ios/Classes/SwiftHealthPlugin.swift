@@ -34,6 +34,8 @@ public class SwiftHealthPlugin: NSObject, FlutterPlugin {
     let WALKING_HEART_RATE = "WALKING_HEART_RATE"
     let WEIGHT = "WEIGHT"
     let DISTANCE_WALKING_RUNNING = "DISTANCE_WALKING_RUNNING"
+    //ADDED NEW
+    let DISTANCE_CYCLING = "DISTANCE_CYCLING"
     let FLIGHTS_CLIMBED = "FLIGHTS_CLIMBED"
     let WATER = "WATER"
     let MINDFULNESS = "MINDFULNESS"
@@ -189,6 +191,7 @@ public class SwiftHealthPlugin: NSObject, FlutterPlugin {
         unitDict[WALKING_HEART_RATE] = HKUnit.init(from: "count/min")
         unitDict[WEIGHT] = HKUnit.gramUnit(with: .kilo)
         unitDict[DISTANCE_WALKING_RUNNING] = HKUnit.meter()
+        unitDict[DISTANCE_CYCLING] = HKUnit.meter()
         unitDict[FLIGHTS_CLIMBED] = HKUnit.count()
         unitDict[WATER] = HKUnit.liter()
         unitDict[MINDFULNESS] = HKUnit.init(from: "")
@@ -217,6 +220,7 @@ public class SwiftHealthPlugin: NSObject, FlutterPlugin {
             dataTypesDict[WALKING_HEART_RATE] = HKSampleType.quantityType(forIdentifier: .walkingHeartRateAverage)!
             dataTypesDict[WEIGHT] = HKSampleType.quantityType(forIdentifier: .bodyMass)!
             dataTypesDict[DISTANCE_WALKING_RUNNING] = HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning)!
+            dataTypesDict[DISTANCE_CYCLING] = HKSampleType.quantityType(forIdentifier: .distanceCycling)!
             dataTypesDict[FLIGHTS_CLIMBED] = HKSampleType.quantityType(forIdentifier: .flightsClimbed)!
             dataTypesDict[WATER] = HKSampleType.quantityType(forIdentifier: .dietaryWater)!
             dataTypesDict[MINDFULNESS] = HKSampleType.categoryType(forIdentifier: .mindfulSession)!
