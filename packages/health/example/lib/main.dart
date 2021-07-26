@@ -41,6 +41,7 @@ class _MyAppState extends State<MyApp> {
       HealthDataType.HEIGHT,
       HealthDataType.BLOOD_GLUCOSE,
       HealthDataType.DISTANCE_WALKING_RUNNING,
+      HealthDataType.DISTANCE_CYCLING,
     ];
 
     setState(() => _state = AppState.FETCHING_DATA);
