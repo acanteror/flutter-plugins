@@ -21,6 +21,7 @@ enum HealthDataType {
   WEIGHT,
   DISTANCE_WALKING_RUNNING,
   DISTANCE_CYCLING,
+  DISTANCE_SWIMMING,
   FLIGHTS_CLIMBED,
   MOVE_MINUTES,
   DISTANCE_DELTA,
@@ -63,6 +64,7 @@ const List<HealthDataType> _dataTypeKeysIOS = [
   HealthDataType.FLIGHTS_CLIMBED,
   HealthDataType.DISTANCE_WALKING_RUNNING,
   HealthDataType.DISTANCE_CYCLING,
+  HealthDataType.DISTANCE_SWIMMING,
   HealthDataType.MINDFULNESS,
   HealthDataType.SLEEP_IN_BED,
   HealthDataType.SLEEP_AWAKE,
@@ -112,6 +114,7 @@ const Map<HealthDataType, HealthDataUnit> _dataTypeToUnit = {
   HealthDataType.WEIGHT: HealthDataUnit.KILOGRAMS,
   HealthDataType.DISTANCE_WALKING_RUNNING: HealthDataUnit.METERS,
   HealthDataType.DISTANCE_CYCLING: HealthDataUnit.METERS,
+  HealthDataType.DISTANCE_SWIMMING: HealthDataUnit.METERS,
   HealthDataType.FLIGHTS_CLIMBED: HealthDataUnit.COUNT,
   HealthDataType.MOVE_MINUTES: HealthDataUnit.MINUTES,
   HealthDataType.DISTANCE_DELTA: HealthDataUnit.METERS,
@@ -149,6 +152,7 @@ const HealthDataTypeJsonValue = {
   HealthDataType.WEIGHT: 'weight',
   HealthDataType.DISTANCE_WALKING_RUNNING: 'distance_walking_running',
   HealthDataType.DISTANCE_CYCLING: 'distance_cycling',
+  HealthDataType.DISTANCE_SWIMMING: 'distance_swimming',
   HealthDataType.FLIGHTS_CLIMBED: 'flights_climbed',
   HealthDataType.MOVE_MINUTES: 'move_minutes',
   HealthDataType.DISTANCE_DELTA: 'distance_delta',
@@ -181,7 +185,7 @@ const HealthDataUnitJsonValue = {
   HealthDataUnit.LITER: 'liter',
 };
 
-const PlatformTypeJsonValue = { 
+const PlatformTypeJsonValue = {
   PlatformType.IOS: 'ios',
   PlatformType.ANDROID: 'android'
 };
